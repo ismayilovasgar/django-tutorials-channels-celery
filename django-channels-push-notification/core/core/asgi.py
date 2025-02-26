@@ -13,11 +13,11 @@ application = ProtocolTypeRouter(
 
     {
         # source_code
-        # "http": get_asgi_application(),
-        # "websocket": URLRouter(urls.websocket_urlpatterns)
+        "http": get_asgi_application(),
+        "websocket": URLRouter(urls.websocket_urlpatterns)
 
         # my code
-        "http": django_application,
-        "websocket": URLRouter(getattr(urls, "websocket_urlpatterns", []))
+        # "http": django_application,
+        # "websocket": URLRouter(getattr(urls, "websocket_urlpatterns", []))
     }
 )

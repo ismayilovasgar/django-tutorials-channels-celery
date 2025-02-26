@@ -10,7 +10,7 @@ urlpatterns = [
 ]
 
 
-websocket_urlpattern = [
+websocket_urlpatterns = [
     path("ws/notifications/",MyNotificationConsumer.as_asgi())
 ]
 

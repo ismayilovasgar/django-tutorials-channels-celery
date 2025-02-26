@@ -43,8 +43,7 @@ class NotificationAdmin(admin.ModelAdmin):
     
     def get_urls(self):
         urls = super().get_urls()
-        custom_url = [
-            path("send-notification/", self.admin_site.admin_view(self.add_view), name="send-notification"),
+        custom_url = [path("send-notification/", self.admin_site.admin_view(self.add_view), name="send-notification"),
         ]
         return custom_url + urls
 
